@@ -1,5 +1,19 @@
 @import "/css/reset.css";
 
-button.delete{
+
+// body{
+//     display: flex;
+//     flex-direction: column;
+// }
+.delete{
+    display: none;
+}
+button.buttonOff{
     display: none;
 }  
+button.buttonOn{
+    display: block;
+}
+.tasks__container{
+    display: flex;
+}
