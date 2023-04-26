@@ -1,0 +1,16 @@
+@import "/css/reset.css";
+.delete {
+  display: none;
+}
+
+button.buttonOff {
+  display: none;
+}
+
+button.buttonOn {
+  display: block;
+}
+
+.tasks__container {
+  display: flex;
+}/*# sourceMappingURL=to-do-list.css.map */
