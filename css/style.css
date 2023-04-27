@@ -49,6 +49,11 @@ button.buttonOn {
   background-color: white;
   top: 50px;
 }
+@media (min-width: 900px) {
+  .tasks {
+    min-width: 70%;
+  }
+}
 .tasks__container {
   padding-bottom: 2px;
 }
