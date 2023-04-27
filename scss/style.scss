@@ -1,6 +1,7 @@
 @import "./reset.css";
 
 body{
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -37,8 +38,8 @@ button.buttonOn{
     text-align: left;
     word-wrap: break-word;
     white-space:normal;
-    min-width: 300px;
-    max-width: 100%;
+    min-width: 30%;
+    max-width: 95%;
     position: relative;
     border: black solid;
     background-color: white;
@@ -61,6 +62,8 @@ button.buttonOn{
         position: relative;
         height: 12px;
         margin-left: 2px;
+        margin-right: 2px;
+        max-width: 30%;
     }
 }
 }
