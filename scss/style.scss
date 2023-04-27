@@ -31,9 +31,12 @@ button.buttonOff{
 button.buttonOn{
     display: block;
     font-size: 10px;
-        height: 15px;
-        display: flex;
-        align-items: center;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    background-image: url(/images/trash-outline.svg);
+    margin-left: 2px;
+
 }
 .tasks__container{
     display: flex;
@@ -68,6 +71,8 @@ button.buttonOn{
         margin: 2px;
         width: 5px;
         height: 15px;
+        background-image: url(/images/pencil-outline.svg);
+        background-repeat: no-repeat;
     &__entry{
         position: relative;
         height: 12px;

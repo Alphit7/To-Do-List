@@ -34,7 +34,6 @@ export function displayTasks() {
       check.setAttribute("class", "tasks__checkbox");
 
       let deleteBtn = document.createElement("button");
-      deleteBtn.textContent = "X";
       deleteBtn.setAttribute("id", j);
       deleteBtn.setAttribute("class", "buttonOff");
       deleteBtn.setAttribute("class", "tasks__delete");
@@ -73,7 +72,6 @@ export function addTask() {
   check.setAttribute("class", "tasks__checkbox");
 
   let deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "X";
   deleteBtn.setAttribute("id", i);
   deleteBtn.setAttribute("class", "buttonOff");
   deleteBtn.setAttribute("class", "tasks__delete");

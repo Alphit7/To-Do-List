@@ -29,6 +29,8 @@ button.buttonOn {
   height: 15px;
   display: flex;
   align-items: center;
+  background-image: url(/images/trash-outline.svg);
+  margin-left: 2px;
 }
 
 .tasks__container {
@@ -68,6 +70,8 @@ button.buttonOn {
   margin: 2px;
   width: 5px;
   height: 15px;
+  background-image: url(/images/pencil-outline.svg);
+  background-repeat: no-repeat;
 }
 .tasks__edit__entry {
   position: relative;
