@@ -1,8 +1,9 @@
 @import "/css/reset.css";
 
-
-.edit{
-    background-image: url("/home/becode/Documents/DOM/To-Do-List/images/pencil-outline.svg");
+body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .delete{
     display: none;

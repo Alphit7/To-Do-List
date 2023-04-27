@@ -24,7 +24,6 @@ export function displayTasks() {
       let edit = document.createElement("button");
       edit.setAttribute("class", "edit");
       edit.setAttribute("id", j);
-      edit.textContent = "Edit";
       div.appendChild(edit);
 
       let check = document.createElement("input");
@@ -63,7 +62,6 @@ export function addTask() {
   let edit = document.createElement("button");
   edit.setAttribute("class", "edit");
   edit.setAttribute("id", i);
-  edit.textContent = "Edit";
   div.appendChild(edit);
 
   let check = document.createElement("input");

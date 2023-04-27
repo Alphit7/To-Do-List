@@ -1,4 +1,4 @@
-import { taskArray } from "./AddingTasks.js";
+import { taskArray } from "/js/AddingTasks.js";
 let submit = document.querySelector(".submit__Btn");
 
 export function removeTask() {
@@ -12,7 +12,6 @@ export function removeTask() {
       let index = elem.id;
       console.log(index);
       taskArray.splice(index, 1);
-      console.log(taskArray);
       elem.parentNode.remove();
       localStorage.setItem("tasks", JSON.stringify(taskArray));
     }
