@@ -1,4 +1,8 @@
 @import "/css/reset.css";
+.edit {
+  background-image: url("/home/becode/Documents/DOM/To-Do-List/images/pencil-outline.svg");
+}
+
 .delete {
   display: none;
 }
@@ -13,4 +17,4 @@ button.buttonOn {
 
 .tasks__container {
   display: flex;
-}/*# sourceMappingURL=to-do-list.css.map */
+}/*# sourceMappingURL=style.css.map */

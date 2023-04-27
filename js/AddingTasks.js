@@ -5,7 +5,7 @@ let i = 0;
 
 export let taskArray = [];
 
-//Fonction pour afficher les tâches stockées dans le localStorag
+//Fonction pour afficher les tâches stockées dans le localStorage
 
 export function displayTasks() {
   let storedTasks = localStorage.getItem("tasks");
@@ -23,6 +23,7 @@ export function displayTasks() {
 
       let edit = document.createElement("button");
       edit.setAttribute("class", "edit");
+      edit.setAttribute("id", j);
       edit.textContent = "Edit";
       div.appendChild(edit);
 
@@ -34,10 +35,9 @@ export function displayTasks() {
 
       let deleteBtn = document.createElement("button");
       deleteBtn.textContent = "Delete";
-      deleteBtn.setAttribute("id", "delete" + j);
+      deleteBtn.setAttribute("id", j);
       deleteBtn.setAttribute("class", "buttonOff");
       deleteBtn.setAttribute("class", "delete");
-
       div.appendChild(deleteBtn);
       i += 1;
     }
@@ -52,7 +52,6 @@ export function addTask() {
   }
   taskArray.push(entry.value);
   localStorage.setItem("tasks", JSON.stringify(taskArray));
-
   let div = document.createElement("div");
   div.setAttribute("class", "tasks__container");
   taskList.prepend(div);
@@ -63,6 +62,7 @@ export function addTask() {
 
   let edit = document.createElement("button");
   edit.setAttribute("class", "edit");
+  edit.setAttribute("id", i);
   edit.textContent = "Edit";
   div.appendChild(edit);
 
@@ -74,13 +74,15 @@ export function addTask() {
 
   let deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
-  deleteBtn.setAttribute("id", "delete" + i);
+  deleteBtn.setAttribute("id", i);
   deleteBtn.setAttribute("class", "buttonOff");
   deleteBtn.setAttribute("class", "delete");
 
   div.appendChild(deleteBtn);
   entry.value = "";
   i += 1;
+  taskList.innerHTML = "";
+  displayTasks();
 }
 // Fonction pour ajouter un événement de clic au bouton de soumission
 submit.addEventListener("click", addTask);

@@ -1,0 +1,18 @@
+@import "/css/reset.css";
+
+
+.edit{
+    background-image: url("/home/becode/Documents/DOM/To-Do-List/images/pencil-outline.svg");
+}
+.delete{
+    display: none;
+}
+button.buttonOff{
+    display: none;
+}  
+button.buttonOn{
+    display: block;
+}
+.tasks__container{
+    display: flex;
+}
