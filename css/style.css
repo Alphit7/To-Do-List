@@ -12,7 +12,7 @@ body {
 .submit__button {
   position: relative;
   top: 15px;
-  background-image: url(/images/send-outline.svg);
+  background-image: url(./images/send-outline.svg);
   background-repeat: no-repeat;
   background-position: center;
   padding-left: 7px;
@@ -34,7 +34,7 @@ button.buttonOn {
   height: 15px;
   display: flex;
   align-items: center;
-  background-image: url(/images/trash-outline.svg);
+  background-image: url(./images/trash-outline.svg);
   margin-left: 2px;
 }
 
@@ -75,7 +75,7 @@ button.buttonOn {
   margin: 2px;
   width: 5px;
   height: 15px;
-  background-image: url(/images/pencil-outline.svg);
+  background-image: url(./images/pencil-outline.svg);
   background-repeat: no-repeat;
 }
 .tasks__edit__entry {
