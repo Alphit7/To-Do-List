@@ -1,12 +1,21 @@
 @import "./reset.css";
 body {
+  text-align: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
+  background-color: lightgray;
 }
 
-.delete {
-  display: none;
+.submit__button {
+  position: relative;
+  top: 10px;
+}
+
+#taskEntry {
+  position: relative;
+  top: 10px;
 }
 
 button.buttonOff {
@@ -15,8 +24,47 @@ button.buttonOff {
 
 button.buttonOn {
   display: block;
+  font-size: 10px;
+  height: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .tasks__container {
   display: flex;
+  align-items: center;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  word-wrap: break-word;
+  white-space: normal;
+  min-width: 300px;
+  max-width: 100%;
+  position: relative;
+  border: black solid;
+  background-color: white;
+  top: 50px;
+}
+.tasks__container {
+  padding-bottom: 2px;
+}
+.tasks__inputs {
+  position: relative;
+}
+.tasks__delete {
+  position: relative;
+  display: none;
+}
+.tasks__edit {
+  margin: 2px;
+  width: 5px;
+  height: 15px;
+}
+.tasks__edit__entry {
+  position: relative;
+  height: 12px;
+  margin-left: 2px;
 }/*# sourceMappingURL=style.css.map */

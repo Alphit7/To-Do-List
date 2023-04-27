@@ -1,8 +1,8 @@
 import { taskArray } from "./AddingTasks.js";
-let submit = document.querySelector(".submit__Btn");
+let submit = document.querySelector(".submit__button");
 
 export function removeTask() {
-  let removeBtn = document.querySelectorAll(".delete");
+  let removeBtn = document.querySelectorAll(".tasks__delete");
   removeBtn.forEach((elem) => {
     if (!elem.classList.contains("remove-listener-added")) {
       elem.addEventListener("click", addEvent);
@@ -10,7 +10,6 @@ export function removeTask() {
     }
     function addEvent() {
       let index = elem.id;
-      console.log(index);
       taskArray.splice(index, 1);
       elem.parentNode.remove();
       localStorage.setItem("tasks", JSON.stringify(taskArray));
@@ -19,15 +18,15 @@ export function removeTask() {
 }
 
 export function displayBtn() {
-  let checkbox = document.querySelectorAll(".checkbox");
+  let checkbox = document.querySelectorAll(".tasks__checkbox");
   checkbox.forEach((element) => {
     element.addEventListener("change", () => {
       if (element.checked) {
-        element.nextSibling.classList.add("buttonOn");
-        element.nextSibling.classList.remove("buttonOff");
+        element.parentNode.lastChild.classList.add("buttonOn");
+        element.parentNode.lastChild.classList.remove("buttonOff");
       } else {
-        element.nextSibling.classList.remove("buttonOn");
-        element.nextSibling.classList.add("buttonOff");
+        element.parentNode.lastChild.classList.remove("buttonOn");
+        element.parentNode.lastChild.classList.add("buttonOff");
       }
     });
   });

@@ -1,10 +1,10 @@
 import { taskArray } from "./AddingTasks.js";
 
 let entry = document.getElementById("taskEntry");
-let submit = document.querySelector(".submit__Btn");
+let submit = document.querySelector(".submit__button");
 
 export function editEntry() {
-  let edit = document.querySelectorAll(".edit");
+  let edit = document.querySelectorAll(".tasks__edit");
   edit.forEach((elem) => {
     if (!elem.classList.contains("edit-listener-added")) {
       elem.addEventListener("click", addEvent);
@@ -12,6 +12,7 @@ export function editEntry() {
     }
     function addEvent() {
       let editImput = document.createElement("input");
+      editImput.setAttribute("class", "tasks__edit__entry");
       editImput.setAttribute("type", "text");
       elem.parentNode.appendChild(editImput);
       elem.disabled = true;
@@ -22,7 +23,7 @@ export function editEntry() {
           let index = elem.id;
           taskArray[index] = editImput.value;
           localStorage.setItem("tasks", JSON.stringify(taskArray));
-          parent.firstChild.textContent = editImput.value;
+          elem.nextSibling.textContent = editImput.value;
           editImput.remove();
           elem.disabled = false;
         }

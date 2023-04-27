@@ -1,5 +1,5 @@
 let entry = document.querySelector("#taskEntry");
-let submit = document.querySelector(".submit__Btn");
+let submit = document.querySelector(".submit__button");
 let taskList = document.querySelector("ul");
 let i = 0;
 
@@ -18,25 +18,26 @@ export function displayTasks() {
       taskList.prepend(div);
 
       let task = document.createElement("li");
+      task.setAttribute("class", "tasks__inputs");
       div.prepend(task);
       task.textContent = taskArray[j];
 
       let edit = document.createElement("button");
-      edit.setAttribute("class", "edit");
+      edit.setAttribute("class", "tasks__edit");
       edit.setAttribute("id", j);
-      div.appendChild(edit);
+      div.prepend(edit);
 
       let check = document.createElement("input");
-      div.appendChild(check);
+      div.prepend(check);
       check.setAttribute("type", "checkbox");
       check.setAttribute("id", "checkbox" + j);
-      check.setAttribute("class", "checkbox");
+      check.setAttribute("class", "tasks__checkbox");
 
       let deleteBtn = document.createElement("button");
-      deleteBtn.textContent = "Delete";
+      deleteBtn.textContent = "X";
       deleteBtn.setAttribute("id", j);
       deleteBtn.setAttribute("class", "buttonOff");
-      deleteBtn.setAttribute("class", "delete");
+      deleteBtn.setAttribute("class", "tasks__delete");
       div.appendChild(deleteBtn);
       i += 1;
     }
@@ -56,25 +57,26 @@ export function addTask() {
   taskList.prepend(div);
 
   let task = document.createElement("li");
+  task.setAttribute("class", "tasks__inputs");
   div.prepend(task);
   task.textContent = taskArray[i];
 
   let edit = document.createElement("button");
-  edit.setAttribute("class", "edit");
+  edit.setAttribute("class", "tasks__edit");
   edit.setAttribute("id", i);
-  div.appendChild(edit);
+  div.prepend(edit);
 
   let check = document.createElement("input");
-  div.appendChild(check);
+  div.prepend(check);
   check.setAttribute("type", "checkbox");
   check.setAttribute("id", i);
-  check.setAttribute("class", "checkbox");
+  check.setAttribute("class", "tasks__checkbox");
 
   let deleteBtn = document.createElement("button");
-  deleteBtn.textContent = "Delete";
+  deleteBtn.textContent = "X";
   deleteBtn.setAttribute("id", i);
   deleteBtn.setAttribute("class", "buttonOff");
-  deleteBtn.setAttribute("class", "delete");
+  deleteBtn.setAttribute("class", "tasks__delete");
 
   div.appendChild(deleteBtn);
   entry.value = "";
