@@ -1,4 +1,4 @@
-import { taskArray } from "./AddingTasks.js";
+import { taskArray } from "/js/AddingTasks.js";
 
 let entry = document.getElementById("taskEntry");
 let submit = document.querySelector(".submit__Btn");
