@@ -42,7 +42,7 @@ button.buttonOn {
   text-align: left;
   word-wrap: break-word;
   white-space: normal;
-  min-width: 30%;
+  min-width: 50%;
   max-width: 95%;
   position: relative;
   border: black solid;
