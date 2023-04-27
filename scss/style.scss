@@ -18,7 +18,12 @@ body{
 }
 .submit__button{
     position: relative;
-    top: 10px;
+    top: 15px;
+    background-image: url(/images/send-outline.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 #taskEntry{
     position: relative;
@@ -79,6 +84,9 @@ button.buttonOn{
         margin-left: 2px;
         margin-right: 2px;
         max-width: 30%;
+        &:focus{
+            border:0px;
+        }
     }
 }
 }
