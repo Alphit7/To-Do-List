@@ -1,4 +1,4 @@
-import { taskArray } from "./js/AddingTasks.js";
+import { taskArray } from "./AddingTasks.js";
 let submit = document.querySelector(".submit__Btn");
 
 export function removeTask() {

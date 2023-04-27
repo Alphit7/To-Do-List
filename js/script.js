@@ -1,5 +1,5 @@
-import { addTask, displayTasks, taskArray } from "./js/AddingTasks.js";
-import { removeTask, displayBtn } from "./js/RemovingTasks.js";
-import { editEntry } from "./js/UpdateTasks.js";
+import { addTask, displayTasks, taskArray } from "./AddingTasks.js";
+import { removeTask, displayBtn } from "./RemovingTasks.js";
+import { editEntry } from "./UpdateTasks.js";
 
 displayTasks();
