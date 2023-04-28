@@ -16,6 +16,7 @@ export function editEntry() {
       editImput.setAttribute("type", "text");
       elem.parentNode.appendChild(editImput);
       elem.disabled = true;
+      elem.parentNode.firstChild.disabled = true;
       editImput.addEventListener("keyup", modify);
       function modify(event) {
         let parent = editImput.parentNode;
@@ -26,6 +27,7 @@ export function editEntry() {
           elem.nextSibling.textContent = editImput.value;
           editImput.remove();
           elem.disabled = false;
+          elem.parentNode.firstChild.disabled = false;
         }
       }
     }
