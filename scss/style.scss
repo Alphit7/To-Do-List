@@ -1,0 +1,92 @@
+@import "./reset.css";
+$screen-lg-min: 900px;
+
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+      @content;
+    }
+}
+
+body{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: lightgray;
+}
+.submit__button{
+    position: relative;
+    top: 15px;
+    background-image: url(/To-Do-List/images/send-outline.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+#taskEntry{
+    position: relative;
+    top: 10px;
+}
+
+button.buttonOff{
+    display: none;
+}  
+button.buttonOn{
+    display: block;
+    font-size: 10px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    background-image: url(/To-Do-List/images/trash-outline.svg);
+    margin-left: 2px;
+
+}
+.tasks__container{
+    display: flex;
+    align-items: center;
+}
+.tasks{
+    @include lg{
+        min-width: 70%;
+    }
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    word-wrap: break-word;
+    white-space:normal;
+    min-width: 50%;
+    max-width: 95%;
+    position: relative;
+    border: black solid;
+    background-color: white;
+    top: 50px;
+    &__container{
+        padding-bottom: 2px;
+    }
+    &__inputs{
+        position: relative;
+    }
+    &__delete{
+        position: relative;
+        display: none;
+    }
+    &__edit{
+        margin: 2px;
+        width: 5px;
+        height: 15px;
+        background-image: url(/To-Do-List/images/pencil-outline.svg);
+        background-repeat: no-repeat;
+    &__entry{
+        position: relative;
+        height: 12px;
+        margin-left: 2px;
+        margin-right: 2px;
+        max-width: 30%;
+        &:focus{
+            border:0px;
+        }
+    }
+}
+}
